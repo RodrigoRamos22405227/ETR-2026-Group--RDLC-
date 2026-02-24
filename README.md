@@ -1,4 +1,4 @@
-#ETR-2026-Group--RDLC
+ETR-2026-Group--RDLC
 # Variant 9 — Privacy & Data Retention (GDPR Persona) — Team <RDLC>
 
 - Variant number: 9
