@@ -6,4 +6,8 @@
 - Key constraint focus: GDPR-style retention and minimization
 - Mandatory slice: Intake & Discovery
 - Notes / clarifications:
-  - ...
+
+Facilitator (keeps time and focus) - Luis Almoster
+Scribe (updates GitBook/docs) - Rodrigo Ramos
+Reviewer (checks quality) - Deyve Silva
+Tester (makes sure tests run) - Cristiano Sandu
