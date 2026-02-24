@@ -7,12 +7,12 @@ The system supports the Intake & Discovery slice by enabling structured data cap
 - Key constraint focus: GDPR-style retention and minimization
 - Mandatory slice: Intake & Discovery
 
-# Objectives
+## Objectives
 Ensure personal data is collected only when strictly necessary (data minimization principle).
 Validate completeness and internal consistency of submitted information and evidence.
 Support a clear and auditable decision outcome: “Ready to Proceed” vs “Need More Data”.
 
-# Non-Objectives
+## Non-Objectives
 The system will not implement full automated legal compliance assessment.
 The system will not define external legal policies beyond the intake slice.
 The system will not manage long-term archival storage outside defined retention constraints.
