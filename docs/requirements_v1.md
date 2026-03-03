@@ -1,10 +1,10 @@
 ## EPIC-A — Intake Session & Validation
 ### REQ-001 — Structured Intake Form
 
-Type: FR
-Stakeholder: Transition Lead
-Priority: H
-Variant impact: No
+- Type: FR
+- Stakeholder: Transition Lead
+- Priority: H
+- Variant impact: No
 
 **Description**
 
@@ -24,10 +24,10 @@ Submission is blocked if mandatory sections are incomplete.
 
 ### REQ-002 — Mandatory Field Validation
 
-Type: FR
-Stakeholder: Transition Lead
-Priority: H
-Variant impact: No
+- Type: FR
+- Stakeholder: Transition Lead
+- Priority: H
+- Variant impact: No
 
 **Description**
 
@@ -47,10 +47,10 @@ Error messages identify each missing field.
 
 ### REQ-003 — DR Evidence Verification
 
-Type: FR
-Stakeholder: Infrastructure Owner
-Priority: H
-Variant impact: No
+- Type: FR
+- Stakeholder: Infrastructure Owner
+- Priority: H
+- Variant impact: No
 
 **Description**
 
@@ -71,10 +71,10 @@ Transition cannot proceed without DR evidence.
 ## EPIC-B — Evidence & Traceability
 ### REQ-005 — Evidence Reference Storage
 
-Type: FR
-Stakeholder: Technical Lead
-Priority: H
-Variant impact: No
+- Type: FR
+- Stakeholder: Technical Lead
+- Priority: H
+- Variant impact: No
 
 **Description**
 
@@ -94,10 +94,10 @@ Evidence source owner is recorded.
 
 ### REQ-010 — Evidence Freshness Rule
 
-Type: FR
-Stakeholder: Transition Lead
-Priority: M
-Variant impact: No
+- Type: FR
+- Stakeholder: Transition Lead
+- Priority: M
+- Variant impact: No
 
 **Description**
 
@@ -118,10 +118,10 @@ System displays reason for rejection.
 ## EPIC-C — Privacy & Retention (GDPR)
 ### REQ-006 — Data Minimization Enforcement
 
-Type: FR
-Stakeholder: Privacy Officer
-Priority: H
-Variant impact: Yes
+- Type: FR
+- Stakeholder: Privacy Officer
+- Priority: H
+- Variant impact: Yes
 
 **Description**
 
@@ -141,10 +141,10 @@ Justification is logged for audit purposes.
 
 ### REQ-007 — Configurable Retention Period
 
-Type: NFR
-Stakeholder: Privacy Officer
-Priority: H
-Variant impact: Yes
+- Type: NFR
+- Stakeholder: Privacy Officer
+- Priority: H
+- Variant impact: Yes
 
 **Description**
 
@@ -164,10 +164,10 @@ Retention configuration changes are logged.
 
 ### REQ-008 — Automatic Anonymization
 
-Type: FR
-Stakeholder: Privacy Officer
-Priority: H
-Variant impact: Yes
+- Type: FR
+- Stakeholder: Privacy Officer
+- Priority: H
+- Variant impact: Yes
 
 **Description**
 
@@ -188,10 +188,10 @@ An audit log entry is created upon anonymization.
 ## EPIC-D — Audit & Logging
 ### REQ-009 — Immutable Audit Log
 
-Type: FR
-Stakeholder: Compliance Officer
-Priority: H
-Variant impact: Yes
+- Type: FR
+- Stakeholder: Compliance Officer
+- Priority: H
+- Variant impact: Yes
 
 **Description**
 
