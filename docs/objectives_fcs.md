@@ -7,7 +7,7 @@
 
 ---
 
-## Objectives (3)
+## Objectives
 
 ### OBJ-1 — Ensure Strict Data Minimization & Security During Intake
 - **Description (why/outcome):** To guarantee compliance with GDPR principles by ensuring the system collects only the absolute minimum personal data necessary and protects it securely at rest.
