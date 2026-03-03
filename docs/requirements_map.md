@@ -28,7 +28,7 @@ NFR-004
 NFR-005  
 NFR-006 
 ---
-## Variant coverage summary (required)
+## Variant coverage summary 
 
 Variant number: 9
 
