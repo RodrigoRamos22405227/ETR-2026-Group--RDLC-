@@ -16,7 +16,7 @@
 - **REQ-005** - Discovery Deficit Reporting (FR) | **Variant impact:** No
 - **REQ-006** - AES-256 Encryption for Intake PII (NFR) | **Variant impact:** Yes
 
-## Variant-driven validation questions (min. 3)
+## Variant-driven validation questions
 1. **[Privacy]** "What happens to the 30-day purge rule if a client formally requests an extension due to legal delays?"
 2. **[Data Minimization]** "If we restrict data to just email and role, how does the transition team contact the client in case of an urgent server outage?"
 3. **[Audit]** "Who is allowed to read the 'Immutable Audit Trail'? If the Privacy Officer leaves the company, how is access transferred?"
