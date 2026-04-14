@@ -39,7 +39,7 @@
 - **Status:** Valid
 - **Issues found:** The log captures the UTC timestamp, but doesn't mention capturing the IP address, which Legal requested during the roleplay.
 - **Proposed fix (rewrite):** Add "User IP Address" to the required fields in the audit log payload.
-- **Expected evidence (how to verify):** Inspection of database tables / Demo
+- **Expected evidence (how to verify):** Inspection of database tables / Demo.
 
 ### REQ-004 — Intake Decision Engine Validation
 - **Status:** Valid
