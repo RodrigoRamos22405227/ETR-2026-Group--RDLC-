@@ -51,10 +51,10 @@
 - **Status:** Needs rewrite
 - **Issues found:** "Display a diagnostic report" is vague. The client wants to be able to download it as a PDF.
 - **Proposed fix (clarify):** Add an acceptance criterion requiring the report to be exportable in PDF format.
-- **Expected evidence (how to verify):** Demo
+- **Expected evidence (how to verify):** Demo.
 
 ### REQ-006 — AES-256 Encryption for Intake PII
 - **Status:** Valid
 - **Issues found:** The DevTeam asked how the encryption keys are rotated. This was not defined.
 - **Proposed fix (split):** Keep REQ-006 for the encryption itself, but create a new technical requirement for "Automated Key Rotation".
-- **Expected evidence (how to verify):** Architecture Review
+- **Expected evidence (how to verify):** Architecture Review.
