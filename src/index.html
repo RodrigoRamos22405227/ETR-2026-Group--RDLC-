@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMS Intake - GDPR Stakeholder Registration</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; padding: 20px; }
+        .container { max-width: 400px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h2 { color: #333; font-size: 20px;}
+        label { font-weight: bold; display: block; margin-top: 15px; }
+        input, select { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+        button { background-color: #0056b3; color: white; padding: 10px 15px; border: none; border-radius: 4px; margin-top: 20px; width: 100%; cursor: pointer; }
+        button:hover { background-color: #004494; }
+        .error { color: red; font-size: 14px; margin-top: 10px; display: none; background: #ffe6e6; padding: 10px; border-radius: 4px;}
+        .success { color: green; font-size: 14px; margin-top: 10px; display: none; background: #e6ffe6; padding: 10px; border-radius: 4px;}
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <h2>Add Stakeholder (Intake)</h2>
+    <p style="font-size: 12px; color: #666;">Variant 9: Strict GDPR Data Minimization Enforced</p>
+    
+    <div id="gdpr-error" class="error">GDPR Violation: Personal phone numbers are prohibited.</div>
+    <div id="success-msg" class="success">Stakeholder securely registered.</div>
+
+    <form id="stakeholderForm">
+        <label for="email">Corporate Email Address</label>
+        <input type="email" id="email" required placeholder="e.g., jane.doe@company.com">
+
+        <label for="role">System Role</label>
+        <select id="role" required>
+            <option value="">Select a role...</option>
+            <option value="Director">Director</option>
+            <option value="Transition Lead">Transition Lead</option>
+            <option value="Contributor">Contributor</option>
+        </select>
+
+        <button type="submit">Save Stakeholder</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('stakeholderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById('email').value;
+        const role = document.getElementById('role').value;
+        const errorDiv = document.getElementById('gdpr-error');
+        const successDiv = document.getElementById('success-msg');
+        
+        // Hide messages initially
+        errorDiv.style.display = 'none';
+        successDiv.style.display = 'none';
+
+        // REQ-001: Regex to block phone numbers (9 or more consecutive digits)
+        const phoneRegex = /\d{9,}/;
+        
+        if (phoneRegex.test(email)) {
+            // Exception Flow (UC-01 / E1)
+            errorDiv.style.display = 'block';
+            document.getElementById('email').value = ''; // Clear input to prevent PII leak
+            return;
+        }
+
+        // REQ-006: Simulate AES-256 Encryption (using Base64 for prototype simplicity)
+        const mockEncryptedEmail = btoa(email);
+        
+        const stakeholderData = {
+            encryptedEmail: mockEncryptedEmail,
+            role: role,
+            timestamp: new Date().toISOString()
+        };
+
+        // Save to local storage (Prototype DB)
+        localStorage.setItem('stakeholder_' + Date.now(), JSON.stringify(stakeholderData));
+        
+        // Success Flow
+        successDiv.style.display = 'block';
+        document.getElementById('stakeholderForm').reset();
+        console.log("Encrypted Data Saved:", stakeholderData);
+    });
+</script>
+
+</body>
+</html>
