@@ -26,7 +26,7 @@ E2. **Invalid Email Domain** → If the email entered is from a public provider 
 
 ---
 
-## UC-03 — Evaluate intake readiness
+## UC-02 — Evaluate intake readiness
 - **Primary actor:** Transition Lead
 - **Goal:** To evaluate if all submitted data and evidence meet the transition criteria without manual bottlenecks.
 - **Preconditions:** At least one stakeholder is registered, and authorization evidence has been uploaded.
