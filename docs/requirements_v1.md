@@ -245,6 +245,3 @@ Variant impact: Yes
 The system shall enforce RBAC ensuring only authorized roles can view, modify, or delete intake data.
 
 Variant impact: Yes
-
-
-nao mudes nada do conteudo, apenas organiza metendo titulos e etc 
