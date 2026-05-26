@@ -3,11 +3,17 @@ from datetime import datetime
 
 
 def validate_email(email):
+    # Empty email check
+    if email == "":
+        return False
+
+    # Reject phone-number-like patterns
     pattern = r"\d{9,}"
 
     if re.search(pattern, email):
         return False
 
+    # Reject public domains
     if "@gmail.com" in email:
         return False
 
