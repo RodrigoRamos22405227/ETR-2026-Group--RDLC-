@@ -1,87 +1,42 @@
-# BDD Report — Lab 13
+# BDD Automation Report — Lab 13
 
-## Project
+## Tool used
 
-AMS Intake Platform
+* PyTest-BDD
+* Language/stack: Python 3.14.3
+* Version: PyTest-BDD 8.1.0
 
-## Slice Covered
+## How to run
 
-Intake & Discovery (Privacy & Retention Focus)
+* Command:
 
-## Feature Implemented
+  * `python -m pytest bdd/steps/test_lab13_steps.py -v`
 
-### Feature: AMS Intake Platform BDD Validation
+## Execution results
 
-The feature validates GDPR-oriented stakeholder registration and evidence freshness rules.
+* Date: 2026-05-29
+* Scenarios executed: 4
+* Passed: 4
+* Failed: 0
 
-## Scenarios
+## Notes
 
-### Scenario 1 — Happy Path
+### What worked well
 
-Valid stakeholder registration using a corporate email.
+* BDD scenarios were successfully automated using PyTest-BDD.
+* All scenarios executed without errors.
+* Traceability between requirements and scenarios was maintained.
+* GDPR-related validation rules were correctly validated.
+* Evidence freshness validation behaved as expected.
 
-Related requirements:
+### What failed and why (if anything)
 
-* REQ-001
-* REQ-006
+* Initial execution failed because the step definitions did not use `target_fixture`, causing fixture resolution errors in PyTest-BDD.
+* The issue was corrected by defining explicit fixtures for scenario results.
 
-Expected outcome:
+### Next steps (improvements)
 
-* Registration accepted.
-
----
-
-### Scenario 2 — Negative Path
-
-Registration attempt using a phone-number-like pattern.
-
-Related requirements:
-
-* REQ-001
-* REQ-006
-
-Expected outcome:
-
-* Registration blocked.
-* GDPR violation message displayed.
-
----
-
-### Scenario 3 — Alternative Flow
-
-Evidence submitted with a future date.
-
-Related requirements:
-
-* REQ-010
-
-Expected outcome:
-
-* Evidence accepted.
-
----
-
-### Scenario 4 — Boundary Test
-
-Evidence exactly 30 days old.
-
-Related requirements:
-
-* REQ-010
-
-Expected outcome:
-
-* Evidence accepted because it is within the allowed freshness window.
-
-## Coverage
-
-| Scenario Type      | Covered |
-| ------------------ | ------- |
-| Happy Path         | Yes     |
-| Alternative Flow   | Yes     |
-| Negative/Error     | Yes     |
-| Boundary Condition | Yes     |
-
-## Conclusion
-
-BDD scenarios successfully demonstrate business behavior defined by project requirements and acceptance criteria. The scenarios provide traceability between requirements, acceptance criteria, and executable specifications.
+* Add additional BDD scenarios for audit logging (REQ-009).
+* Add BDD scenarios for automatic anonymization after retention expiry (REQ-008).
+* Automate execution in a CI/CD pipeline.
+* Expand coverage with additional alternative and exception flows.
