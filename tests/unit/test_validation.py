@@ -16,7 +16,8 @@ def test_valid_email():
 
 
 def test_valid_evidence_date():
-    assert validate_evidence_date("2026-05-01") is True
+    fake_today = datetime(2026, 5, 10)
+    assert validate_evidence_date(  "2026-05-01",  fake_today  ) is True
 
 
 def test_create_audit_log():
